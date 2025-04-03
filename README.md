@@ -1,12 +1,38 @@
-# World-Happiness-Report
-Práctica en Python de ANOVA y Kruskal-Wallis (método no paramétrico) para investigar si las medias (o medianas, según sea el caso) de los puntajes de felicidad difieren entre los países del mundo, usando el conjunto de datos World Happiness Report.
+# World Hapiness Report - Análisis Estadístico en Python
+Este proyecto explora si existen diferencias significativas en los niveles de felicidad entre distintas regiones del mundo, utilizando métodos estadísticos paramétricos y no paramétricos sobre el conjunto de datos **World Happiness Report**.
 
-El **World Happiness Report** es una iniciativa internacional que evalúa y clasifica a los países del mundo según los niveles de felicidad percibida por sus ciudadanos. Este conjunto de datos proviene de encuestas realizadas anualmente por Gallup World Poll y es utilizado ampliamente en investigaciones sobre bienestar, desarrollo social, economía conductual y políticas públicas.
+## Objetivo
+Evaluar si los puntajes de felicidad difieren entre regiones del mundo, aplicando:
+* La **prueba t de Student** para comparar dos regiones específicas.
+* La **prueba de Kruskall-Wallis** (no paramétrica) para comparar múltiples regiones, seguida de una **prueba de Dunn** como análisis post hoc.
 
-El **objetivo** de este estudio es averiguar si hay diferencias entre los puntajes de la felicidad entre las diferentes regiones del mundo, aplicando métodos paramétricos y no paramétricos según se requiera.
+## Metodología
+1. Variable principal: *Happiness Score*, que representa la percepción de felicidad en cada país.
+2. Comparación entre dos regiones:
+   * Se verificaron los supuestos de la prueba t: normalidad, homogeneidad de varianzas, independencia y tamaños razonables.
+   * Se aplicó la prueba t de Student para muestras independientes entre:
+     * Europa Central y Oriental.
+     * América Latina y el Caribe.
+3. Comparación entre múltiples regiones.
+   * Dado el desequilibrio en tamaños muestrales y algunas regiones con muy pocos datos, se descartaron regiones con menos de tres observaciones.
+   * Se aplicó la prueba de Kruskall-Wallis.
+   * Tras rechazar la hipótesis nula, se realizó un análisis post hoc con la prueba de Dunn (con corrección de Bonferroni).
 
-Hay 11 variables, ninguna tiene valores nulos. En este estudio nos interesa particularmente el *Happiness Score*, la puntuación de la felicidad, que es un número flotante. La puntuación de la felicidad es la suma de las seis columnas *Economy (GDP per Capita)*, *Family*, *Health (Life Expectancy)*, *Freedom*, *Trust (Government Corruption)*, *Generosity*, que describen el grado en que esos factores contribuyen a la evaluación de la felicidad en cada país.
+## Fuente de datos
+* Nombre: World Happiness Report.
+* Provedor: Gallup World Poll.
+* Disponible en: https://www.kaggle.com/datasets/unsdsn/world-happiness/data
+* Año: 2015.
 
-En particular, se usará la prueba t para comparar las medias de dos muestras independientes (Europa Central y Oriental y América Latina y el Caribe); esta prueba tiene varios supuestos (normalidad de las distribuciones, homogeneidad de varianzas, independendia entre observaciones, independencia entre muestras, tamaños de muestra razonables y homogéneos), algunos de los cuales deben ser verificados. Además, se usará la prueba de Kruskall-Wallis para comparar las medianas (y con ello las distribuciones) de los puntajes de felicidad en las distintas regiones del mundo; esta es una alternativa no paramétrica al ANOVA, al no cumplirse los supuestos requeridos.
+La variable *Happiness Score* se construye como la suma ponderada de:
+* *Economy (GDP per Capita)*
+* *Family*
+* *Health (Life Expectancy)*
+* *Freedom*
+* *Trust (Government Corruption)*
+* *Generosity*
 
-Ver conjunto de datos en: https://www.kaggle.com/datasets/unsdsn/world-happiness/data
+## Resultados clave
+* Se verificaron correctamente los supuestos para la prueba t, concluyendo una diferencia significativa en la felicidad entre Europa Central y Oriental vs América Latina y el Caribe.
+* La prueba de Kruskal-Wallis mostró diferencias globales significativas entre regiones.
+* El post hoc de Dunn identificó pares de regiones con diferencias estadísticamente significativas.
