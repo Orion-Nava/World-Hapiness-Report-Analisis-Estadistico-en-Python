@@ -44,8 +44,8 @@ Este repositorio contiene los siguientes archivos y carpetas:
 
 - `Tableau Dashboards/`: carpeta con los tableros desarrollados en Tableau.
   - `Tableau_Workbook_Felicidad.twbx`: archivo del libro de trabajo de Tableau.
-  - `Distribución Global del Nivel de Felicidad Países y Regiones.png`: imagen del primer dashboard.
-  - `Factores que contribuyen al nivel de felicidad Análisis Regional.jpg`: imagen del segundo dashboard.
+  - `Distribución Global del Nivel de Felicidad Países y Regiones`: imagen del primer dashboard.
+  - `Factores que contribuyen al nivel de felicidad Análisis Regional`: imagen del segundo dashboard.
 
 - `data/`: carpeta que contiene los datos originales.
   - `2015.csv`: archivo CSV con el World Happiness Report 2015.
@@ -82,7 +82,7 @@ Este repositorio contiene los siguientes archivos y carpetas:
 - Listados del Top 10 países más y menos felices.
 - Escala de color clara con leyenda explicativa.
 
-Archivo: `Distribución Global del Nivel de Felicidad Países y Regiones.png`
+Archivo: `Distribución Global del Nivel de Felicidad Países y Regiones`
 
 ---
 
@@ -97,7 +97,7 @@ Archivo: `Distribución Global del Nivel de Felicidad Países y Regiones.png`
   - Generosidad
 - Permite observar qué componentes son más fuertes o débiles según la región.
 
-Archivo: `Factores que contribuyen al nivel de felicidad Análisis Regional.jpg`
+Archivo: `Factores que contribuyen al nivel de felicidad Análisis Regional`
 
 ---
 
