@@ -36,21 +36,19 @@ Este proyecto integra técnicas estadísticas y visualización de datos para ana
 
 ## Estructura del repositorio
 
-World-Happiness-Report/
-│
-├── Python Notebook.ipynb
-│ ↳ Contiene análisis estadístico:
-│ - Prueba t para comparar dos regiones.
-│ - Prueba de Kruskal-Wallis y prueba de Dunn (post hoc).
-│
-├── Tableau Dashboards/
-│ ├── Tableau_Workbook_Felicidad.twbx
-│ ├── Distribución Global del Nivel de Felicidad Países y Regiones.png
-│ └── Factores que contribuyen al nivel de felicidad Análisis Regional.jpg
-│
-├── data/
-│ └── 2015.csv # Datos originales del reporte de felicidad
+Este repositorio contiene los siguientes archivos y carpetas:
 
+- `Python Notebook.ipynb`: contiene el análisis estadístico realizado en Python:
+  - Prueba t para comparar dos regiones.
+  - Prueba de Kruskal-Wallis y prueba de Dunn (post hoc).
+
+- `Tableau Dashboards/`: carpeta con los tableros desarrollados en Tableau.
+  - `Tableau_Workbook_Felicidad.twbx`: archivo del libro de trabajo de Tableau.
+  - `Distribución Global del Nivel de Felicidad Países y Regiones.png`: imagen del primer dashboard.
+  - `Factores que contribuyen al nivel de felicidad Análisis Regional.jpg`: imagen del segundo dashboard.
+
+- `data/`: carpeta que contiene los datos originales.
+  - `2015.csv`: archivo CSV con el World Happiness Report 2015.
 
 ---
 
